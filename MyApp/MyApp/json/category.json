@@ -1,0 +1,28 @@
+[
+  {
+    "nameCategory": "дети",
+    "id": 0,
+    "image": "https://i.ibb.co/WGHV5GN/invalid-Name-2x.png"
+  },
+  {
+    "nameCategory": "взрослые",
+    "id": 1,
+    "image": "https://i.ibb.co/y46T9ts/invalid-Name-2x.png"
+  },
+  {
+    "nameCategory": "пожилые",
+    "id": 2,
+    "image": "https://i.ibb.co/k4DVgRm/invalid-Name-2x.png"
+  },
+  {
+    "nameCategory": "животные",
+    "id": 3,
+    "image": "https://i.ibb.co/G9LrrVK/invalid-Name-2x.png"
+  },
+  {
+    "nameCategory": "мероприятия",
+    "id": 4,
+    "image": "https://i.ibb.co/SVJFkTQ/invalid-Name-2x.png"
+  }
+]
+

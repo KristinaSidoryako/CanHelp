@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CategoryEntity" representedClassName="CategoryEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image" optional="YES" attributeType="URI"/>
+        <attribute name="nameCategory" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="EventEntity" representedClassName="EventEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="adress" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="descriptionEvent" optional="YES" attributeType="Binary"/>
+        <attribute name="eventCategory" optional="YES" attributeType="String"/>
+        <attribute name="fond" optional="YES" attributeType="String"/>
+        <attribute name="iconImage" optional="YES" attributeType="URI"/>
+        <attribute name="icons" optional="YES" attributeType="Binary"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="likes" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="mainText" optional="YES" attributeType="String"/>
+        <attribute name="mainTitle" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="Binary"/>
+        <attribute name="userIcon" optional="YES" attributeType="Binary"/>
+    </entity>
+    <elements>
+        <element name="CategoryEntity" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="EventEntity" positionX="-54" positionY="18" width="128" height="238"/>
+    </elements>
+</model>
