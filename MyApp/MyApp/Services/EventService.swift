@@ -48,16 +48,19 @@ class EventService {
       let unarchiveUserIcon = NSKeyedUnarchiver.unarchiveObject(with: dataUserIcon as Data)
       let arrayUserIcon = unarchiveUserIcon as! [String]
       
-      let event = Event(eventCategory: element.value(forKey: "eventCategory") as! String,
-                        id: element.value(forKey: "id") as! Int,
-                        iconImage: element.value(forKey: "iconImage") as! URL,
-                        mainTitle: element.value(forKey: "mainTitle") as! String,
-                        mainText: element.value(forKey: "mainText") as! String,
-                        date: element.value(forKey: "date") as! Date,
-                        fond: element.value(forKey: "fond") as! String,
-                        adress: element.value(forKey: "adress") as! String,
-                        phone: arrayPhone, icons: arrayIcons, descriptionEvent: arrayDescriptionEvent, userIcon: arrayUserIcon,
-                        likes: element.value(forKey: "likes") as! Int)
+      let event = Event(
+        eventCategory: element.value(forKey: "eventCategory") as! String,
+        id: element.value(forKey: "id") as! Int,
+        iconImage: element.value(forKey: "iconImage") as! URL,
+        mainTitle: element.value(forKey: "mainTitle") as! String,
+        mainText: element.value(forKey: "mainText") as! String,
+        date: element.value(forKey: "date") as! Date,
+        fond: element.value(forKey: "fond") as! String,
+        adress: element.value(forKey: "adress") as! String,
+        phone: arrayPhone, icons: arrayIcons, descriptionEvent: arrayDescriptionEvent, userIcon: arrayUserIcon,
+        likes: element.value(forKey: "likes") as! Int
+      )
+      
       events.append(event)
     }
     

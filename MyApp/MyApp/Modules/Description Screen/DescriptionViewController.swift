@@ -55,16 +55,17 @@ class DescriptionViewController: UIViewController {
       .bind(to: descriptionTableView
         .rx
         .items(cellIdentifier: "\(DescriptionTableViewCell.self)",
-               cellType: DescriptionTableViewCell.self)) { [unowned self] index, viewModel, cell in
-          cell.configure(viewModel: viewModel)
-          self.iconFirst.image = UIImage(named: viewModel.displayUserIcon[0])
-          self.iconSecond.image = UIImage(named: viewModel.displayUserIcon[1])
-          self.iconThird.image = UIImage(named: viewModel.displayUserIcon[2])
-          self.iconFourth.image = UIImage(named: viewModel.displayUserIcon[3])
-          self.iconFifth.image = UIImage(named: viewModel.displayUserIcon[4])
-          self.likes.text = "+\(viewModel.displayLikes)"
-    }
-    .disposed(by: disposeBag)
+               cellType: DescriptionTableViewCell.self)) {
+                [unowned self] index, viewModel, cell in
+                cell.configure(viewModel: viewModel)
+                self.iconFirst.image = UIImage(named: viewModel.displayUserIcon[0])
+                self.iconSecond.image = UIImage(named: viewModel.displayUserIcon[1])
+                self.iconThird.image = UIImage(named: viewModel.displayUserIcon[2])
+                self.iconFourth.image = UIImage(named: viewModel.displayUserIcon[3])
+                self.iconFifth.image = UIImage(named: viewModel.displayUserIcon[4])
+                self.likes.text = "+\(viewModel.displayLikes)"
+      }
+      .disposed(by: disposeBag)
   }
   
   // MARK: IBActions

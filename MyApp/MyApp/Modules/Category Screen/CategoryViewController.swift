@@ -43,10 +43,11 @@ class CategoryViewController: UIViewController {
     collectionView
       .rx
       .modelSelected(CategoryViewModel.self)
-      .subscribe(onNext: { [unowned self] (model) in
+      .subscribe(onNext: {
+        [unowned self] (model) in
         self.selectedCategory = model.displayCategoryName
         self.performSegue(withIdentifier: self.segueIdentifierEvent, sender: self)
-    }).disposed(by: disposeBag)
+      }).disposed(by: disposeBag)
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -59,18 +60,19 @@ class CategoryViewController: UIViewController {
       .bind(to: collectionView
         .rx
         .items(cellIdentifier: "\(SectionCollectionViewCell.self)",
-               cellType: SectionCollectionViewCell.self)) { [unowned self] index, viewModel, cell in
-          // size cell
-          let frameCV = self.collectionView.frame
-          let spacing = CGFloat(CGFloat((self.countCells + 1)) * self.offset) / CGFloat(self.countCells)
-          let widthCell = frameCV.width / CGFloat(self.countCells)
-          let heightCell = widthCell - 10
-          cell.bounds.size.width = widthCell - spacing
-          cell.bounds.size.height = heightCell - (self.offset * 2)
-      
-          cell.configure(viewModel: viewModel)
-    }
-    .disposed(by: disposeBag)
+               cellType: SectionCollectionViewCell.self)) {
+                 [unowned self] index, viewModel, cell in
+                 // size cell
+                 let frameCV = self.collectionView.frame
+                 let spacing = CGFloat(CGFloat((self.countCells + 1)) * self.offset) / CGFloat(self.countCells)
+                 let widthCell = frameCV.width / CGFloat(self.countCells)
+                 let heightCell = widthCell - 10
+                 cell.bounds.size.width = widthCell - spacing
+                 cell.bounds.size.height = heightCell - (self.offset * 2)
+            
+                 cell.configure(viewModel: viewModel)
+      }
+      .disposed(by: disposeBag)
   }
         
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

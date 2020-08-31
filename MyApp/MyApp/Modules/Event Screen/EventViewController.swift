@@ -59,10 +59,11 @@ class EventViewController: UIViewController {
       .bind(to: eventsTableView
         .rx
         .items(cellIdentifier: "\(EventTableViewCell.self)",
-               cellType: EventTableViewCell.self)) { [unowned self] index, viewModel, cell in
-          cell.configure(viewModel: viewModel, delegate: self)
-    }
-    .disposed(by: disposeBag)
+               cellType: EventTableViewCell.self)) {
+                 [unowned self] index, viewModel, cell in
+                 cell.configure(viewModel: viewModel, delegate: self)
+      }
+      .disposed(by: disposeBag)
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
